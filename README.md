@@ -22,5 +22,5 @@ openssl enc -aes-128-cbc -K 304d08c0481dd9d0289c11d316f7ffc8 -iv d426ce445975577
 Add this line to cron:
 
 ```
+*/15 * * * * /usr/bin/curl --silent "https://hostedserver/update_domain.php?k=304d08c0481dd9d0289c11d316f7ffc8&i=d426ce44597557723c30dcde3db0d3bd&rec=domain1”
 ```
-
