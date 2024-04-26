@@ -7,10 +7,14 @@ Edit the script before uploading it to the hosting provider:
 
 1. Generate AES key and IV: `dd if=/dev/urandom bs=1 count=16 2> /dev/null | xxd -p`
 2. Create an API user: https://www.iv.lt/pagalba/Klient%C5%B3_sistemos_API#Specialus_API_naudotojas
-3. Encrypt the API password using AES-CBC: 
-4. Put the user name, account id and the encrypted password
-5. Save
-6. Upload
+3. Encrypt the API password using AES-CBC, ex:
+```
+echo -n "YourAPIpasswordGoesHere" | \
+openssl enc -aes-128-cbc -K 304d08c0481dd9d0289c11d316f7ffc8 -iv d426ce44597557723c30dcde3db0d3bd | xxd -p -c 1000000
+```
+5. Put the user name, account id and the encrypted password
+6. Save
+7. Upload
 
 # OpenWRT cron
 
