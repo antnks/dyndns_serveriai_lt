@@ -14,7 +14,7 @@ openssl enc -aes-128-cbc -K 304d08c04replace289c11d316f7ffc8 -iv d42replace75577
 ```
 4. Get your domain id: https://klientams.iv.lt/domain.php?id=xxxxx
 5. Put the api user name, domain id and the encrypted password into `update_domain.php` file
-6. Edit the list of domains that script allowed to update, ex `domain1, domain2, domain3`
+6. Edit the list of domains that script allowed to update, ex `$allowed_domains = array("domain1", "domain2");`
 7. Save
 8. Upload
 
