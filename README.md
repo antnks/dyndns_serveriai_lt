@@ -10,7 +10,7 @@ Edit the script before uploading it to the hosting provider:
 3. Encrypt the API password using AES-CBC, ex:
 ```
 echo -n "YourAPIpasswordGoesHere" | \
-openssl enc -aes-128-cbc -K 304d08c0481dd9d0289c11d316f7ffc8 -iv d426ce44597557723c30dcde3db0d3bd | xxd -p -c 1000000
+openssl enc -aes-128-cbc -K 304d08c0481dd9d0289c11d316f7ffc8 -iv d426ce44597557723c30dcde3db0d3bd | xxd -p -c 64
 ```
 4. Get your domain id: https://klientams.iv.lt/domain.php?id=xxxxx
 5. Put the api user name, domain id and the encrypted password into `update_domain.php` file
